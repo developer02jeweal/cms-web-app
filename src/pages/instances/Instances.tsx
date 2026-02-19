@@ -13,7 +13,6 @@ import InstanceFormModal from "@/components/InstanceFormModal";
 import ConfirmModal from "@/components/ConfirmModal";
 import toast from "react-hot-toast";
 import { encryptQR } from "@/utils/qrEncrypt";
-import QRIcon from "@/assets/qrcode-svgrepo-com.svg?react";
 
 export default function Instances() {
     const [instances, setInstances] = useState<any[]>([]);
@@ -275,7 +274,11 @@ export default function Instances() {
                                                         onClick={() => handleDownloadQR(i)}
                                                         className="px-3 py-1.5 bg-sky-100 rounded-lg hover:bg-sky-200 transition "
                                                     >
-                                                        <QRIcon className="w-5 h-5 text-sky-600" />
+                                                        <img
+                                                            src="/qrcode-svgrepo-com.svg"
+                                                            className="w-5 h-5"
+                                                            alt="QR Code"
+                                                        />
                                                     </button>
 
                                                 </td>
